@@ -2,7 +2,7 @@
  * @Author: Zezheng Li
  * @Date: 2021-08-31 23:10:51
  * @LastEditors: Zezheng Li
- * @LastEditTime: 2021-09-01 02:15:19
+ * @LastEditTime: 2021-09-01 02:27:21
  * @Description: file content
  */
 #include"include/split.hpp"
@@ -18,6 +18,7 @@
 #include<forward_list>
 #include<deque>
 #include<queue>
+#include<stack>
 
 using namespace std;
 using namespace mysplit;
