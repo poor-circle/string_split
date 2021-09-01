@@ -1,4 +1,10 @@
 #include<regex>
+
+
+#if __cplusplus || _MSVC_LANG >= 201703L
+#define HAS_CPP_17 1
+#endif
+
 namespace mysplit
 {
     //helper function to type-deduction
@@ -39,6 +45,7 @@ namespace mysplit
     } // namespace detail
 
     //helper function to get singleton re-compiled regex
+
     template<typename char_type>
     decltype(auto) inline get_ws_regex()
     {
@@ -135,3 +142,5 @@ namespace mysplit
     void split_to(const wchar_t* str, inserter_type&& inserter, const std::regex& r = get_ws_regex<wchar_t>()) { split_to(str, str + wcslen(str), inserter, r); }
 
 }
+
+#undef HAS_CPP_17
