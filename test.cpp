@@ -2,7 +2,7 @@
  * @Author: Zezheng Li
  * @Date: 2021-08-31 23:10:51
  * @LastEditors: Zezheng Li
- * @LastEditTime: 2021-09-01 02:27:21
+ * @LastEditTime: 2021-09-01 16:02:31
  * @Description: file content
  */
 #include"include/split.hpp"
@@ -47,9 +47,9 @@ int main(void)
     split_to(s,back_inserter(a3));//insert at back
     split_to(s,front_inserter(a3));//insert at front
 
+
     //output by ostream_iterator
     split_to(s.begin(),s.end(),ostream_iterator<string_view>(cout,"\n"));
-    
     //save to adapter
     queue a7(split<vector<string_view>>(s));
     stack a8(split<vector<string_view>>(s));
@@ -81,6 +81,5 @@ int main(void)
     //support wstring_view
     wstring_view wsv=wstr;
     auto a18=split<unordered_set<wstring_view>>(wsv);
-
     return 0;
 }
